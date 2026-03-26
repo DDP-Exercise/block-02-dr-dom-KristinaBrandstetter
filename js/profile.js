@@ -11,7 +11,7 @@
  *     For my code to show it's full potential, I just
  *     need one object. Can you help me out?
  *
- *     Bratlsoft - 2026-03-15
+ *     Kristina - 2026-03-15
  *******************************************************/
 
 //TODO: Place one object here.
@@ -37,7 +37,7 @@ let companion = document.createElement("p");
 companion.textContent = "I also do have a "+SAVIOR.type_of_companion+ " as a companion."; // Pet, Friend, Sister, Emotional Support Airplane, ... Be creative!
 companion.innerHTML = companion.textContent +
     "<br/>I am a bit nerdy though, so let me just show you all my "+SAVIOR.type_of_companion+"s attributes as key-value pairs:";
-
+//pot. Text-Ersatzt: i am not nerdy at all, however, i'd like to show you all my ...
 let companion_properties = document.createElement("ul");
 for(const KEY in SAVIOR.companion){
     let property = document.createElement("li");

@@ -18,7 +18,7 @@
  *     is watching. We have to do it the right way.
  *     The JavaScript way!
  *
- *     Bratlsoft - 2026-03-15
+ *     Kristina - 2026-03-25
  *******************************************************/
 
 /**
@@ -26,9 +26,10 @@
  * First of all, we need to be able to read the text again,
  * without the risk of catching an eye infection!
  */
-
-
-
+document.getElementById("message").style.color = "black";
+document.getElementById("message").style.backgroundColor = "white";
+document.getElementById("message").nextElementSibling.style.color = "black";
+document.getElementById("message").nextElementSibling.style.backgroundColor = "white";
 
 /**
  * TODO 2:
@@ -36,16 +37,27 @@
  * Can't we just remove them all together?
  */
 
-
-
+document.querySelector("ul").remove();
 
 /**
  * TODO 3:
  * Wow! You are so powerful! Quick now, set our heroes of the web free!
  * And while at it, let the world know again, that they are back in town!
  */
+document.getElementById("message").nextElementSibling.textContent = "Let us introduce to you our list of Web-Heroes - they are back!!";
 
 
+const heroes_of_the_web = document.getElementById("heroes_of_the_web");
+heroes_of_the_web.style.visibility = "visible";
+
+let new_heroes = ["Devs Too", "Edvin Con Sole", "Kyle De'Bugger", "Storm. Web Storm.", "Brad Git", "El Torvalds", "__proto__"];
+let new_heroes_ul = document.createElement("ul");
+
+heroes_of_the_web.append(new_heroes_ul);
+    for (const HERO of new_heroes) {
+        let list_element = document.createElement("li");
+        list_element.textContent = HERO;
+}
 
 /**
  * TODO 4:
@@ -53,7 +65,7 @@
  * Do your thing, savior!
  */
 
-
+document.getElementById("title").textContent = "We, the mighty Heroes of the web, will protect you!";
 
 /**
  * TODO 5:
@@ -63,3 +75,8 @@
  * It might sound paranoid. But I can't get rid of the feeling, that he is still here,
  * somewhere in the DOM. I can still feel his Code. Can you identify the source and remove it?
  */
+
+document.getElementById("message").textContent = "We care for simplistic design!";
+
+document.querySelector('script[src="js/dr.dom.js"]').remove();
+
