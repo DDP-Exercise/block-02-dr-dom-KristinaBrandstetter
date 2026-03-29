@@ -16,6 +16,22 @@
 
 //TODO: Place one object here.
 
+const SAVIOR = {
+    name: "Kristina",
+    age: 20,
+    location: "Ried in der Riedmark",
+    hobbies: ["reading", "hiking", "horsebackriding", "procrastinating",],
+    type_of_companion: "Horses",
+}
+SAVIOR.companion = {
+    name: "Rapunzel & Milano",
+    age: "18 & 13 years",
+    breed: "Noriker & Hungarian Warmblood",
+    color: "black/brown & white (but usually dirty) ",
+    favoriteFood: "literally everything eatable (and sometimes not so eatable) & sugar free treats (isn't allowed to eat sugar)",
+    favoriteActivities: "eating and walking & cantering and jumping",
+    biggestFears: "has no fears & ghosts",
+}
 /*******************************************************
  *   DO NOT CHANGE THE CODE BELOW!
  *******************************************************/
@@ -34,10 +50,9 @@ for(const HOBBY of SAVIOR.hobbies){
 }
 
 let companion = document.createElement("p");
-companion.textContent = "I also do have a "+SAVIOR.type_of_companion+ " as a companion."; // Pet, Friend, Sister, Emotional Support Airplane, ... Be creative!
+companion.textContent = "I also do have two "+SAVIOR.type_of_companion+ " as companions."; // Pet, Friend, Sister, Emotional Support Airplane, ... Be creative!
 companion.innerHTML = companion.textContent +
-    "<br/>I am a bit nerdy though, so let me just show you all my "+SAVIOR.type_of_companion+"s attributes as key-value pairs:";
-//pot. Text-Ersatzt: i am not nerdy at all, however, i'd like to show you all my ...
+    "<br/>I am not nerdy at all, however, i'd like to show you all my "+SAVIOR.type_of_companion+"s attributes as key-value pairs:";
 let companion_properties = document.createElement("ul");
 for(const KEY in SAVIOR.companion){
     let property = document.createElement("li");
